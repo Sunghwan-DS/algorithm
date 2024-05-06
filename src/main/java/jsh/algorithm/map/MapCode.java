@@ -8,7 +8,7 @@ import java.util.TreeMap;
 public class MapCode {
 
     public static void main(String[] args) {
-        hashMapEx();
+        unionMap();
     }
 
     private static void hashMapEx() {
@@ -45,5 +45,18 @@ public class MapCode {
 
         var entrySet = map.entrySet();
         System.out.println(entrySet);
+    }
+
+    private static void unionMap() {
+        Map<String, Integer> map1 = new HashMap<>();
+        Map<String, Integer> map2 = new HashMap<>();
+
+        map1.put("a", 1);
+        map1.put("c", 3);
+        map2.put("b", 2);
+        map2.put("c", 4);
+
+        map1.putAll(map2);
+        System.out.println(map1);
     }
 }
